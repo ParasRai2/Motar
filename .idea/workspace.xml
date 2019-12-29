@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="17ebb503-e285-4f91-968f-3bfda762ef11" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/html/Admin/dashboard.html" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectId" id="1VPofHobEMQ61YiLkvCLizAsYGZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/html/Admin" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\New folder\Motar\html\Admin" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="17ebb503-e285-4f91-968f-3bfda762ef11" name="Default Changelist" comment="" />
+      <created>1576749284940</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576749284940</updated>
+      <workItem from="1576749289191" duration="12230000" />
+      <workItem from="1576818310873" duration="10234000" />
+      <workItem from="1577164204592" duration="13941000" />
+      <workItem from="1577420780898" duration="2432000" />
+      <workItem from="1577594615283" duration="1309000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="28" key="#Inspections" timestamp="1577165041444">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="275" y="28" key="#Inspections/0.0.1366.738/-1440.-129.1440.870@0.0.1366.738" timestamp="1577165041444" />
+    <state x="384" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1577164211902">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="384" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.738/-1440.-129.1440.870@0.0.1366.738" timestamp="1577164211902" />
+  </component>
+</project>

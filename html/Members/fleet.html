@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Motar</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/all.css">
+    <link rel="stylesheet" href="../../css/sidebar.css">
+
+</head>
+
+<body>
+
+<div class="content bg-primary m-3 rounded px-3 py-3">
+    <div class="content text-center text-primary h4 font-weight-bold">
+        Fleet List
+    </div>
+
+    <!--    OPtions-->
+    <div class="row">
+        <div class="col">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-info btn-sm">copy</button>
+                <button type="button" class="btn btn-info btn-sm">Excel</button>
+                <button type="button" class="btn btn-info btn-sm">CSV</button>
+                <button type="button" class="btn btn-info btn-sm">PDf</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addFleet">Add
+                    fleet
+                </button>
+                <button type="button" class="btn btn-primary btn-sm">Delete fleet</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row">
+                <div class="col-10">
+                    <input type="search" class="form-control form-control-sm">
+                </div>
+                <div class="col-2">
+                    <button type="button" class="btn btn-success btn-sm">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--    Table-->
+    <div class="content my-2">
+        <table class="table table-sm text-primary table-bordered">
+            <thead class="bg-secondary">
+            <th class="text-center"><input type="checkbox"></th>
+            <th class="text-center">ID</th>
+            <th>Name</th>
+            <th>Joined at</th>
+            <th>Company name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>Company logo</th>
+            <th class="text-center">Action</th>
+            </thead>
+            <tbody>
+            <tr>
+
+                <td class="text-center"><input type="checkbox"></td>
+                <td class="text-center">1</td>
+                <td>Don</td>
+                <td>01 jan 2020</td>
+                <td>Company@jail</td>
+                <td>don@email.com</td>
+                <td>000-00000</td>
+                <td class="text-center"><a href="../../Oggy.jpg" target="_blank"><img class="rounded" src="../../Oggy.jpg"
+                                                                                   style="height: 80px;"></a></td>
+                <td class="text-center">
+                    <a href="#" data-toggle="modal" data-target="#viewProviders">Show providers</a> /
+                    <a href="#" data-toggle="modal" data-target="#editFleet">Edit</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="content text-primary">No data found</div>
+    </div>
+
+
+    <!--    Add Fleet-->
+    <div class="modal fade" id="addFleet">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-secondary text-primary">
+
+
+                <form>
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title  text-primary font-weight-bold">Add fleet</h4>
+                        <span data-dismiss="modal" style="cursor: pointer;"> X </span>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+
+                        <!--Info-->
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="">Name</label>
+                                    <input class="form-control form-control-sm" type="text" placeholder="Enter name">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="">Email</label>
+                                    <input class="form-control form-control-sm" type="email" placeholder="Enter email">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="">Mobile</label>
+                                    <input type="tel" class="form-control form-control-sm" placeholder="Enter mobile">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="">Company name</label>
+                                    <input type="tel" class="form-control form-control-sm"
+                                           placeholder="Enter company name">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="">Password</label>
+                                    <input class="form-control form-control-sm" type="password"
+                                           placeholder="Enter password">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="">Confirm Password</label>
+                                    <input class="form-control form-control-sm" type="password"
+                                           placeholder="Re-enter password">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="">Upload company logo</label>
+                                    <input type="file" accept="image/jpeg,image/png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success btn-sm">Save</button>
+                        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cancel</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--    Edit dispatcher-->
+    <div class="modal fade" id="editFleet">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-secondary text-primary">
+
+
+                <form>
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title  text-primary font-weight-bold">Edit sub-admin</h4>
+                        <span data-dismiss="modal" style="cursor: pointer;"> X </span>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+
+                        <!--Info-->
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="">Name</label>
+                                    <input class="form-control form-control-sm" type="text" placeholder="Enter name">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="">Email</label>
+                                    <input class="form-control form-control-sm" type="email" placeholder="Enter email">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="">Mobile</label>
+                                    <input type="tel" class="form-control form-control-sm" placeholder="Enter mobile">
+                                </div>
+                            </div>
+                        </div><!--Info-->
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="">Company name</label>
+                                    <input type="tel" class="form-control form-control-sm"
+                                           placeholder="Enter company name">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="">Password</label>
+                                    <input class="form-control form-control-sm" type="password"
+                                           placeholder="Enter password">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="">Confirm Password</label>
+                                    <input class="form-control form-control-sm" type="password"
+                                           placeholder="Re-enter password">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="">Upload image</label>
+                                    <input type="file" accept="image/jpeg,image/png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success btn-sm">Save</button>
+                        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cancel</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!--    View providers-->
+    <div class="modal fade" id="viewProviders">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-secondary text-primary">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title  text-primary font-weight-bold">Providers</h4>
+                    <span data-dismiss="modal" style="cursor: pointer;"> X </span>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+
+                    <table class="table table-sm text-primary table-bordered">
+                        <thead class="bg-secondary">
+                        <th class="text-center">ID</th>
+                        <th>Name</th>
+                        <th>Joined at</th>
+                        <th>Email</th>
+                        <th>Mobile</th>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="text-center">1</td>
+                            <td>Don</td>
+                            <td>01 jan 2020</td>
+                            <td>don@email.com</td>
+                            <td>000-00000</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="content text-primary">No data found</div>
+
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</body>
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+<script src="../../js/all.js"></script>
+
+</html>

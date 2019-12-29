@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Motar</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/all.css">
+    <link rel="stylesheet" href="../../css/sidebar.css">
+
+</head>
+
+<body>
+
+<div class="content bg-primary m-3 rounded px-3 py-3">
+    <div class="content text-center text-primary h4 font-weight-bold">
+        Request history
+    </div>
+    <hr>
+
+    <!--    Options-->
+    <div class="row">
+        <div class="col">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-info btn-sm">copy</button>
+                <button type="button" class="btn btn-info btn-sm">Excel</button>
+                <button type="button" class="btn btn-info btn-sm">CSV</button>
+                <button type="button" class="btn btn-info btn-sm">PDf</button>
+            </div>
+        </div>
+        <div class="col">
+
+        </div>
+        <div class="col">
+            <div class="row">
+                <div class="col-10">
+                    <input type="search" class="form-control form-control-sm" placeholder="Search here..">
+                </div>
+                <div class="col-2">
+                    <button type="button" class="btn btn-success btn-sm">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--    Table-->
+    <div class="content my-2">
+        <table class="table table-sm text-primary table-bordered">
+            <thead class="bg-secondary">
+            <th class="text-center"><input type="checkbox"></th>
+            <th class="text-center">ID</th>
+            <th>Booking ID</th>
+            <th>User name</th>
+            <th>Provider name</th>
+            <th>Date & Time</th>
+            <th>Status</th>
+            <th>Amount</th>
+            <th>Payment mode</th>
+            <th>Payment status</th>
+            <th>Action</th>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="text-center"><input type="checkbox"></td>
+                <td class="text-center">1</td>
+                <td>225</td>
+                <td>Stevens Demo</td>
+                <td>Jago Demo</td>
+                <td>21 Dec 2019, 11:19 AM</td>
+                <td>Completed</td>
+                <td>Rs. 300</td>
+                <td>Cash</td>
+                <td>paid</td>
+                <td><a href="#" data-toggle="modal" data-target="#detail">Show detail</a></td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="content text-primary">No data found</div>
+    </div>
+
+
+    <!-- Details -->
+    <div class="modal fade" id="detail" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content bg-primary">
+                <div class="modal-header">
+                    <h5 class="modal-title text-primary">Detail</h5>
+                    <button type="button" class="close text-primary" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body row text-primary">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col">
+                                User Name:
+                            </div>
+                            <div class="col">
+                                Paras
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                Provider Name:
+                            </div>
+                            <div class="col">
+                                Paras
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                Total Distance:
+                            </div>
+                            <div class="col">
+                                -
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                User Name:
+                            </div>
+                            <div class="col">
+                                Paras
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                Ride start time:
+                            </div>
+                            <div class="col">
+                                22nd of December 2019 03:25:24 PM
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                Ride end time:
+                            </div>
+                            <div class="col">
+                                22nd of December 2019 03:25:57 PM
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                User Name:
+                            </div>
+                            <div class="col">
+                                Paras
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                OTP:
+                            </div>
+                            <div class="col">
+                                9761
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                User Name:
+                            </div>
+                            <div class="col">
+                                Paras
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                Pickup Address:
+                            </div>
+                            <div class="col">
+                                Koteswor
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                Drop Address:
+                            </div>
+                            <div class="col">
+                                Satdobato
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                Base Price:
+                            </div>
+                            <div class="col">
+                                Rs. 20
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                Distance price:
+                            </div>
+                            <div class="col">
+                                Rs. 0.00
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                Discount Price:
+                            </div>
+                            <div class="col">
+                                Rs. 0
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                ETA Discount Price:
+                            </div>
+                            <div class="col">
+                                Rs. 0
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                Tax Price :
+                            </div>
+                            <div class="col">
+                                Rs. 0
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                Surge Price:
+                            </div>
+                            <div class="col">
+                                Rs. 0
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                Total Amount:
+                            </div>
+                            <div class="col">
+                                Rs. 0
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                Wallet Deduction:
+                            </div>
+                            <div class="col">
+                                Rs. 0
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                Paid Amount:
+                            </div>
+                            <div class="col">
+                                Rs. 23
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                Paid Amount:
+                            </div>
+                            <div class="col">
+                                Rs. 23
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                Provider Earning:
+                            </div>
+                            <div class="col">
+                                Rs. 18
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                Commission:
+                            </div>
+                            <div class="col">
+                                Rs. 2
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                Ride Status:
+                            </div>
+                            <div class="col">
+                                Completed
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+
+                        <div class="rounded" id="googleMap" style="width:100%;height: 100%;"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</body>
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+<script src="../../../js/all.js"></script>
+<script>
+    function myMap() {
+        var mapProp= {
+            center:new google.maps.LatLng(28.3949, 84.1240),
+            zoom:10,
+        };
+        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYCRd5CIF8Oa0V4mi7nNpJMMz0gfS6TOc&callback=myMap"></script>
+
+</html>

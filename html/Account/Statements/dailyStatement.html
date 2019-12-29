@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Motar</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" rel="stylesheet">
+    <link href="../../../css/all.css" rel="stylesheet">
+    <link href="../../../css/sidebar.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="content bg-primary m-3 rounded px-3 py-3">
+    <div class="content text-center text-primary h4 font-weight-bold">
+        Today's statements - 22nd Dec 2019
+    </div>
+    <hr>
+    <div class="content text-center text-primary h4 font-weight-bold">
+        Today's Earning : $20<br>
+        Today's Commission : $2
+    </div>
+
+    <style>
+        .table-row:hover {
+            background-color: #151932 !important;
+            cursor: pointer;
+        }
+
+        .box {
+            box-shadow: 0px 0px 15px #151932;
+            z-index: 3;
+        }
+
+        .box:hover {
+            box-shadow: 0px 0px 15px black;
+            cursor: pointer;
+            z-index: 3;
+        }
+    </style>
+
+    <!--Info-->
+    <div class="row">
+        <div class="col">
+            <div class="content rounded p-4 box">
+                <div class="row text-primary h5 font-weight-bold">
+                    TOTAL NO. OF RIDES
+                </div>
+                <div class="row text-primary">
+                    0
+                </div>
+                <div class="row text-primary h6">
+                    <small>% cancelled</small>
+                </div>
+            </div>
+
+        </div>
+        <div class="col">
+            <div class="content rounded p-4 box">
+                <div class="row text-primary h5 font-weight-bold">
+                    REVENUE
+                </div>
+                <div class="row text-primary">
+                    Rs. 0.00
+                </div>
+                <div class="row text-primary h6">
+                    <small>from 0 rides</small>
+                </div>
+            </div>
+
+        </div>
+        <div class="col">
+            <div class="content rounded p-4 box">
+                <div class="row text-primary h5 font-weight-bold">
+                    CANCELLED RIDE
+                </div>
+                <div class="row text-primary">
+                    0
+                </div>
+                <div class="row text-primary h">
+                    <small>from 0 rides</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="content rounded p-4 mt-3 text-primary "
+         style="box-shadow: 0px 0px 15px #1C233F; z-index:3;">
+        <div class="content font-weight-bold">
+            Earnings
+        </div>
+        <small>No data found</small>
+        <!--    Options-->
+        <div class="row mb-2">
+            <div class="col">
+                <div aria-label="Basic example" class="btn-group" role="group">
+                    <button class="btn btn-info btn-sm" type="button">copy</button>
+                    <button class="btn btn-info btn-sm" type="button">Excel</button>
+                    <button class="btn btn-info btn-sm" type="button">CSV</button>
+                    <button class="btn btn-info btn-sm" type="button">PDf</button>
+                </div>
+            </div>
+            <div class="col"></div>
+            <div class="col">
+                <div class="row">
+                    <div class="col-10">
+                        <input class="form-control form-control-sm" placeholder="Search here.." type="search">
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-success btn-sm" type="button">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--    Table-->
+        <table class="table table-sm text-primary table-bordered" style="font-size: 14px;">
+            <thead class="bg-secondary">
+            <th>Booking ID</th>
+            <th>Date on</th>
+            <th>Provider name</th>
+            <th>User name</th>
+            <th>Trip amount</th>
+            <th>GST</th>
+            <th>User paid</th>
+            <th>Commission</th>
+            <th>Driver earning</th>
+            <th>Status</th>
+            <th>Mode</th>
+            </thead>
+            <tbody class="text-primary">
+            <tr class="table-row">
+                <td>00021</td>
+                <td>22 Dec 2019</td>
+                <td>JagoDemo</td>
+                <td>StevensDemo</td>
+                <td>Rs. 20</td>
+                <td>Rs. 3.6</td>
+                <td>Rs. 23.6</td>
+                <td>Rs. 2</td>
+                <td>Rs.18</td>
+                <td>Completed</td>
+                <td>Cash</td>
+            </tr>
+            <tr class="table-row">
+                <td>00021</td>
+                <td>22 Dec 2019</td>
+                <td>JagoDemo</td>
+                <td>StevensDemo</td>
+                <td>Rs. 20</td>
+                <td>Rs. 3.6</td>
+                <td>Rs. 23.6</td>
+                <td>Rs. 2</td>
+                <td>Rs.18</td>
+                <td>Going</td>
+                <td>Card</td>
+            </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+</body>
+
+<script
+        crossorigin="anonymous"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+<script src="../../../js/all.js"></script>
+
+</html>

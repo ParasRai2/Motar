@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Motar</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../../../css/all.css" rel="stylesheet">
+    <link href="../../../css/sidebar.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="content bg-primary m-3 rounded px-3 py-3">
+    <div class="content text-center text-primary h4 font-weight-bold">
+        Service type
+    </div>
+    <hr>
+
+    <style>
+        .table-row:hover {
+            background-color: #151932 !important;
+            cursor: pointer;
+        }
+
+        .box {
+            box-shadow: 0px 0px 15px #151932;
+            z-index: 3;
+        }
+
+        .box:hover {
+            box-shadow: 0px 0px 15px black;
+            cursor: pointer;
+            z-index: 3;
+        }
+    </style>
+
+    <div class="content rounded p-4 mt-3 text-primary "
+         style="box-shadow: 0px 0px 15px #1C233F; z-index:3;">
+        <div class="content font-weight-bold">
+            Roles
+        </div>
+        <!--    Options-->
+        <div class="row mb-2">
+            <div class="col">
+                <div class="btn-group" role="group">
+                    <button class="btn btn-info btn-sm" type="button">copy</button>
+                    <button class="btn btn-info btn-sm" type="button">Excel</button>
+                    <button class="btn btn-info btn-sm" type="button">CSV</button>
+                    <button class="btn btn-info btn-sm" type="button">PDf</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="btn-group" role="group">
+                    <button class="btn btn-info btn-sm" type="button" data-toggle="modal" data-target="#addRole">Add new
+                        service
+                    </button>
+                    <button class="btn btn-danger btn-sm" type="button">Delete service</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="col-10">
+                        <input class="form-control form-control-sm" placeholder="Search here.." type="search">
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-success btn-sm" type="button">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--    Table-->
+        <table class="table table-sm text-primary table-bordered" style="font-size: 14px;">
+            <thead class="bg-secondary">
+            <th class="text-center"><input type="checkbox"></th>
+            <th>ID</th>
+            <th>Service name</th>
+            <th>Provider name</th>
+            <th>Capacity</th>
+            <th>Base price</th>
+            <th>Price calculation</th>
+            <th>Service image</th>
+            <th>Time based price</th>
+            <th>Rental</th>
+            <th class="text-center">Action</th>
+            </thead>
+            <tbody class="text-primary">
+            <tr class="table-row">
+                <td class="text-center"><input type="checkbox"></td>
+                <td>000021</td>
+                <td>Sedan</td>
+                <td>Driver</td>
+                <td>0</td>
+                <td>Rs. 200</td>
+                <td>Distance pricing</td>
+                <td class="text-center"><a href="../../../Oggy.jpg"><img class="rounded" src="../../Oggy.jpg" height="100"></a>
+                </td>
+                <td class="text-center"><a href="#" data-toggle="modal" data-target="#view">View</a></td>
+                <td class="text-center"><a href="#" data-toggle="modal" data-target="#rental">Rental</a></td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <!-- View -->
+    <div class="modal fade" id="view" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content bg-secondary">
+                <div class="modal-header">
+                    <h5 class="modal-title  text-primary" id="permissionTitle">Time Based Price</h5>
+                    <button type="button" class="close text-primary" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!--    Table-->
+                    <table class="table table-sm text-primary table-bordered" style="font-size: 14px;">
+                        <thead class="bg-secondary">
+                        <th>ID</th>
+                        <th>Time</th>
+                        <th>Peak price</th>
+                        </thead>
+                        <tbody class="text-primary">
+                        <tr class="table-row">
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add service -->
+    <div class="modal fade" id="addRole" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content bg-secondary">
+                <div class="modal-header">
+                    <h5 class="modal-title text-primary">Add service</h5>
+                    <button type="button" class="close text-primary" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <form>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Service name</label>
+                                    <input type="text" class="form-control form-control-sm"
+                                           placeholder="Enter service name">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Provider name</label>
+                                    <input type="text" class="form-control form-control-sm"
+                                           placeholder="Enter provider name">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Service image</label>
+                                    <input type="file" class="form-control-file">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Pricing logic</label>
+                                    <input type="text" class="form-control form-control-sm"
+                                           placeholder="Enter per min pricing">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Base price</label>
+                                    <input type="text" class="form-control form-control-sm"
+                                           placeholder="Enter base price">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <textarea class="form-control form-control-sm" placeholder="Description"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-primary h4">
+                            Outstation fare
+                            <hr>
+                        </div>
+                        <div class="row">
+
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Outstation Oneway Price</label>
+                                    <input type="text" class="form-control form-control-sm"
+                                           placeholder="Oneway price">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Outstation roundtrip Price</label>
+                                    <input type="text" class="form-control form-control-sm"
+                                           placeholder="Roundtrip price">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Driver bata</label>
+                                    <input type="text" class="form-control form-control-sm"
+                                           placeholder="Driver bata per day">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="text-primary h4">
+                                    Rental fare
+                                    <hr>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label>Rental Per Hour</label>
+                                        <input type="text" class="form-control form-control-sm"
+                                               placeholder="Set hour price">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+
+                                <div class="text-primary h4">
+                                    Peak Time (Minute Fare)
+                                    <hr>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label>Rental Per Hour</label>
+                                        <input type="text" class="form-control form-control-sm"
+                                               placeholder="Set hour price">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="text-primary h4">
+                                Peak Time (Minute Fare)
+                                <hr>
+                            </div>
+
+                            <!--    Options-->
+                            <div class="row mb-2">
+                                <div class="col">
+                                    <div class="btn-group" role="group">
+                                        <button class="btn btn-info btn-sm" type="button">copy</button>
+                                        <button class="btn btn-info btn-sm" type="button">Excel</button>
+                                        <button class="btn btn-info btn-sm" type="button">CSV</button>
+                                        <button class="btn btn-info btn-sm" type="button">PDf</button>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                </div>
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col-9">
+                                            <input class="form-control form-control-sm" placeholder="Search here.." type="search">
+                                        </div>
+                                        <div class="col-2 pl-0">
+                                            <button class="btn btn-success btn-sm" type="button">
+                                                <i class="fa fa-search"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!--    Table-->
+                            <table class="table table-sm text-primary table-bordered" style="font-size: 14px;">
+                                <thead class="bg-secondary">
+                                <th>ID</th>
+                                <th>Time</th>
+                                <th>Peak price</th>
+                                </thead>
+                                <tbody class="text-primary">
+                                <tr class="table-row">
+                                    <td>1</td>
+                                    <td>12:11 AM - 12:11 AM</td>
+                                    <td><input type="text" class="form-control form-control-sm"></td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td>2</td>
+                                    <td>12:00 AM - 11:59 PM</td>
+                                    <td><input type="text" class="form-control form-control-sm"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="text-primary h4">
+                            Night fare
+                            <hr>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Night fare (in %)</label>
+                                    <input type="text" class="form-control form-control-sm"
+                                           placeholder="Night fare">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="text-primary h4">
+                                Clustured Price
+                                <hr>
+                            </div>
+                            <!--    Table-->
+                            <table class="table table-sm text-primary table-bordered" style="font-size: 14px;">
+                                <thead class="bg-secondary">
+                                <th>ID</th>
+                                <th>City</th>
+                                <th>Distance(0 KM)</th>
+                                <th>Distance price</th>
+                                <th>City limits(0 KM)</th>
+                                <th>Minute price</th>
+                                </thead>
+                                <tbody class="text-primary">
+                                <tr class="table-row">
+                                    <td>1</td>
+                                    <td>Lalitpur</td>
+                                    <td><input type="text" class="form-control form-control-sm" placeholder="0"></td>
+                                    <td><input type="text" class="form-control form-control-sm" placeholder="0"></td>
+                                    <td><input type="text" class="form-control form-control-sm" placeholder="0"></td>
+                                    <td><input type="text" class="form-control form-control-sm" placeholder="0"></td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td>2</td>
+                                    <td>Kathamandu</td>
+                                    <td><input type="text" class="form-control form-control-sm" placeholder="0"></td>
+                                    <td><input type="text" class="form-control form-control-sm" placeholder="0"></td>
+                                    <td><input type="text" class="form-control form-control-sm" placeholder="0"></td>
+                                    <td><input type="text" class="form-control form-control-sm" placeholder="0"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="subit" class="btn btn-success btn-sm" data-dismiss="modal">Save</button>
+                            <button type="reset" class="btn btn-danger btn-sm" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rental -->
+    <div class="modal fade" id="rental" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content bg-secondary">
+                <div class="modal-header">
+                    <h5 class="modal-title  text-primary">Rental hour package</h5>
+                    <button type="button" class="close text-primary" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row mb-1">
+                        <div class="col">
+                            <div class="btn-group">
+                                <button class="btn btn-info btn-sm">Copy</button>
+                                <button class="btn btn-info btn-sm">Excel</button>
+                                <button class="btn btn-info btn-sm">CSV</button>
+                                <button class="btn btn-info btn-sm">PDF</button>
+                            </div>
+                        </div>
+                        <div class="col text-center">
+                            <button class="btn btn-primary btn-sm" data-target="#addservice" data-toggle="modal">Add service</button>
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-10">
+                                    <input type="search" class="form-control form-control-sm" placeholder="Search here...">
+                                </div>
+                                <div class="col-2">
+                                    <button class="btn btn-success btn-sm"><i class="fa fa-search"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--    Table-->
+                    <table class="table table-sm text-primary table-bordered" style="font-size: 14px;">
+                        <thead class="bg-secondary">
+                        <th>ID</th>
+                        <th>Hour</th>
+                        <th>KM</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                        </thead>
+                        <tbody class="text-primary">
+                        <tr class="table-row">
+                            <td>1</td>
+                            <td>5</td>
+                            <td>10</td>
+                            <td>20</td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- re-->
+    <div class="modal fade" id="addservice" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content bg-secondary">
+                <div class="modal-header">
+                    <h5 class="modal-title text-primary" id="editRoleTitle">Add rental hour package</h5>
+                    <button type="button" class="close text-primary" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <form>
+                    <div class="modal-body">
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Hour</label>
+                                <input type="text" class="form-control form-control-sm" placeholder="Hour">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label>KM</label>
+                                <input type="text" class="form-control form-control-sm" placeholder="Km">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Price</label>
+                                <input type="text" class="form-control form-control-sm" placeholder="Price">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success btn-sm">Save</button>
+                        <button type="reset" class="btn btn-danger btn-sm" data-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+
+<script
+        crossorigin="anonymous"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+<script src="../../../js/all.js"></script>
+
+</html>

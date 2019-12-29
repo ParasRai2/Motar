@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Motar</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/all.css">
+    <link rel="stylesheet" href="../../css/sidebar.css">
+
+</head>
+
+<body>
+
+<div class="content bg-primary m-3 rounded px-3 py-3">
+    <div class="content text-center text-primary h4 font-weight-bold">
+        User List
+    </div>
+    <div class="content text-primary font-weight-bold mb-2">
+        Users
+    </div>
+    <!--    Options-->
+    <div class="content mb-2">
+        <div class="row">
+            <div class="col-6">
+                <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addUser">Add new User</button>
+                <button class="btn btn-danger btn-sm">Delete selected</button>
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-6 offset-4">
+                        <input class="form-control form-control-sm" type="search" placeholder="Search here">
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-success btn-sm"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <style>
+        .table-row:hover {
+            background-color: #151932 !important;
+            cursor: pointer;
+        }
+    </style>
+
+    <!--    Table-->
+    <table class="table table-sm text-primary table-bordered rounded border" style="font-size: 14px;">
+        <thead class="bg-secondary">
+        <th class="text-center"><input class="form-control-checkbox" type="checkbox"></th>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Joined at</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Preferred ride</th>
+        <th>Ratings</th>
+        <th>Amount</th>
+        </thead>
+        <tbody class="text-primary">
+        <tr class="table-row">
+            <td class="text-center"><input class="form-control-checkbox" type="checkbox"></td>
+            <td data-toggle="modal" data-target="#viewUser">001</td>
+            <td data-toggle="modal" data-target="#viewUser">Paras Rai</td>
+            <td data-toggle="modal" data-target="#viewUser">03 poush, 2076</td>
+            <td data-toggle="modal" data-target="#viewUser">email@email.com</td>
+            <td data-toggle="modal" data-target="#viewUser">0000-0000</td>
+            <td data-toggle="modal" data-target="#viewUser">Car</td>
+            <td class="text-center"  data-toggle="modal" data-target="#viewUser">5.0<i class="fa fa-star"></i></td>
+            <td data-toggle="modal" data-target="#viewUser">Rs. 1000</td>
+        </tr>
+        <tr class="table-row" >
+            <td class="text-center"><input class="form-control-checkbox" type="checkbox"></td>
+            <td data-toggle="modal" data-target="#viewUser">002</td>
+            <td data-toggle="modal" data-target="#viewUser">Rajan Sharma</td>
+            <td data-toggle="modal" data-target="#viewUser">05 poush, 2076</td>
+            <td data-toggle="modal" data-target="#viewUser">email-2@email.com</td>
+            <td data-toggle="modal" data-target="#viewUser">0000-0010</td>
+            <td data-toggle="modal" data-target="#viewUser">Bike</td>
+            <td class="text-center"  data-toggle="modal" data-target="#viewUser">4.5<i class="fa fa-star"></i></td>
+            <td data-toggle="modal" data-target="#viewUser">Rs. 1500</td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <!--    View User-->
+    <div class="modal fade" id="viewUser">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-secondary">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title  text-primary font-weight-bold">User history</h4>
+                    <span data-dismiss="modal" style="cursor: pointer;"> X </span>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+
+                    <table class="table table-sm text-primary table-bordered" style="font-size: 12px;">
+                        <thead class="bg-secondary">
+                            <th class="text-center">Date</th>
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Serviced by</th>
+                            <th>Vehicle</th>
+                            <th>Time of ride</th>
+                            <th>Cost</th>
+                            <th class="text-center">Ride rating</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">2nd Poush, 2076</td>
+                                <td>Koteshwor</td>
+                                <td>Baneshwor</td>
+                                <td>Himal</td>
+                                <td>Car</td>
+                                <td>45 min</td>
+                                <td>Rs. 400</td>
+                                <td class="text-center">4.5<i class="fa fa-star"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editUser">Edit</button>
+                    <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<!--    Add new user-->
+    <div class="modal fade" id="addUser">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-secondary">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title  text-primary font-weight-bold">Add user</h4>
+                    <span data-dismiss="modal" style="cursor: pointer;"> X </span>
+                </div>
+
+
+                <form>
+                <!-- Modal body -->
+                <div class="modal-body">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="text-primary font-weight-bold">Enter name</label>
+                                    <input class="form-control form-control-sm" type="text" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="text-primary font-weight-bold">Enter email</label>
+                                    <input class="form-control form-control-sm" type="email" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="text-primary font-weight-bold">Enter phone</label>
+                                    <input class="form-control form-control-sm" type="tel" placeholder="Phone">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="text-primary font-weight-bold">Preferred ride</label>
+                                    <select class="form-control form-control-sm">
+                                        <option value="Car">Car</option>
+                                        <option value="Bike">Bike</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="text-primary font-weight-bold">Upload image</label>
+                                    <div class="row">
+                                        <input type="file" accept="image/x-png,image/gif,image/jpeg,image/jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success btn-sm" data-dismiss="modal">Save</button>
+                    <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cancel</button>
+                </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit user-->
+    <div class="modal fade" id="editUser">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-secondary">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title  text-primary font-weight-bold">Edit user</h4>
+                    <span data-dismiss="modal" style="cursor: pointer;"> X </span>
+                </div>
+
+
+                <form>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="text-primary font-weight-bold">Name</label>
+                                    <input class="form-control form-control-sm" type="text" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="text-primary font-weight-bold">Email</label>
+                                    <input class="form-control form-control-sm" type="email" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="text-primary font-weight-bold">Phone</label>
+                                    <input class="form-control form-control-sm" type="tel" placeholder="Phone">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="text-primary font-weight-bold">Preferred ride</label>
+                                    <select class="form-control form-control-sm">
+                                        <option value="Car">Car</option>
+                                        <option value="Bike">Bike</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="text-primary font-weight-bold">Upload image</label>
+                                    <div class="row">
+                                        <input type="file" accept="image/x-png,image/gif,image/jpeg,image/jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success btn-sm" data-dismiss="modal">Save</button>
+                        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cancel</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+<script src="../../js/all.js"></script>
+
+</html>

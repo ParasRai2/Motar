@@ -1,0 +1,113 @@
+body{
+    background-color: #151932 !important;
+}
+
+.bg-secondary{
+    background-color: #151932 !important;
+}
+
+.bg-primary {
+    color: white !important;
+    background-color: #1C233F !important;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar {
+    overflow-y: hidden;
+    width: 350px;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding: 15px;
+}
+
+
+/* Fixed sidenav, full height */
+.sidenav {
+    height: 100vh;
+    width: 250px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #1C233F;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Main content */
+.main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    font-size: 20px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+    height: 0px;
+    background-color: black;
+    padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+    float: right;
+    padding-right: 8px;
+}
+
+.drop-items {
+    display: none;
+    background-color: #151932;
+}
+
+.d-btn {
+    width: 200px;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: white;
+}
+
+.text-primary{
+    color: #AEB4CE !important;
+}
+
+hr {
+    border: 0.5px solid white;
+}
+
+.sidenav::-webkit-scrollbar {
+    width: 4px;
+}
+
+/* Track */
+.sidenav::-webkit-scrollbar-track {
+    background: #151932;
+}
+
+/* Handle */
+.sidenav::-webkit-scrollbar-thumb {
+    background: #616582;
+}
+
+/* Handle on hover */
+.sidenav::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

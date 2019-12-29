@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Motar</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../../../css/all.css" rel="stylesheet">
+    <link href="../../css/sidebar.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="content bg-primary m-3 rounded px-3 py-3">
+    <div class="content text-center text-primary h4 font-weight-bold">
+        Time
+    </div>
+    <hr>
+
+    <style>
+        .table-row:hover {
+            background-color: #151932 !important;
+            cursor: pointer;
+        }
+
+        .box {
+            box-shadow: 0px 0px 15px #151932;
+            z-index: 3;
+        }
+
+        .box:hover {
+            box-shadow: 0px 0px 15px black;
+            cursor: pointer;
+            z-index: 3;
+        }
+    </style>
+
+    <div class="content rounded p-4 mt-3 text-primary "
+         style="box-shadow: 0px 0px 15px #1C233F; z-index:3;">
+        <div class="content font-weight-bold">
+            Time
+        </div>
+        <!--    Options-->
+        <div class="row mb-2">
+            <div class="col">
+                <div class="btn-group" role="group">
+                    <button class="btn btn-info btn-sm" type="button">copy</button>
+                    <button class="btn btn-info btn-sm" type="button">Excel</button>
+                    <button class="btn btn-info btn-sm" type="button">CSV</button>
+                    <button class="btn btn-info btn-sm" type="button">PDf</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="btn-group" role="group">
+                    <button class="btn btn-info btn-sm" type="button" data-toggle="modal" data-target="#adddocument">Add new
+                        Document
+                    </button>
+                    <button class="btn btn-danger btn-sm" type="button">Delete Document</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="col-10">
+                        <input class="form-control form-control-sm" placeholder="Search here.." type="search">
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-success btn-sm" type="button">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--    Table-->
+        <table class="table table-sm text-primary table-bordered" style="font-size: 14px;">
+            <thead class="bg-secondary">
+            <th class="text-center"><input type="checkbox"></th>
+            <th>ID</th>
+            <th>Promocode</th>
+            <th>Discount</th>
+            <th>Use Count</th>
+            <th>From Date</th>
+            <th>Expiration</th>
+            <th>Status</th>
+            <th>Used Count</th>
+            </thead>
+            <tbody class="text-primary">
+            <tr class="table-row">
+                No data available
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <!-- Add document -->
+    <div class="modal fade" id="adddocument" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content bg-secondary">
+                <div class="modal-header">
+                    <h5 class="modal-title text-primary">Add promocode</h5>
+                    <button type="button" class="close text-primary" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <form>
+                    <div class="modal-body text-primary">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Promocode</label>
+                                    <input type="text" class="form-control form-control-sm"
+                                           placeholder="Promocode">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Discount</label>
+                                    <input type="text" class="form-control form-control-sm"
+                                           placeholder="Discount">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Use Count</label>
+                                    <input class="form-control form-control-sm" type="text" placeholder="Use Count">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>From Date</label>
+                                    <input type="date" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Expiration</label>
+                                    <input type="date" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Status</label>
+                                    <input class="form-control form-control-sm" type="text" placeholder="Status">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-success btn-sm" data-dismiss="modal">Save</button>
+                            <button type="reset" class="btn btn-danger btn-sm" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script
+        crossorigin="anonymous"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+<script src="../js/all.js"></script>
+
+</html>

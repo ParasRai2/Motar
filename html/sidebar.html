@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Motar</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/all.css">
+</head>
+
+<body>
+<div class="wrapper">
+
+    <!--    Sidebar-->
+    <div class="sidenav px-2 text-white pb-5" style="width: 300px;">
+
+        <!--        toggle btn-->
+        <a href="#collapse" class="text-white content border-bottom" onclick="togglesidebar()">
+            <i class="fa fa-bars"></i>
+            <span class="sidebar-text">
+                     Motar
+            </span>
+        </a>
+        <div class="container mt-3 pl-4">
+            <span class="sidebar-text row" style="font-size: 10px; height: 10px; width: 200px;">ADMIN DASHBOARD</span>
+        </div>
+        <!--        Dashboard btn-->
+        <a href="#dashboard" class="content" style="width: 200px;">
+            <i class="fa fa-tachometer-alt"></i>
+            <span class="sidebar-text">
+                    Dashboard
+            </span>
+        </a>
+        <!--        Dispatcher-->
+        <a href="#dispatcher_panel" class="content" style="width: 200px;">
+            <i class="fa fa-car"></i>
+            <span class="sidebar-text" style="width: 150px;">
+                    Dispatcher panel
+                </span>
+        </a>
+        <!--        Heat map-->
+        <a href="#heat_map" class="content" style="width: 200px;">
+            <i class="fa fa-map"></i>
+            <span class="sidebar-text" style="width: 150px;">
+                    Heat map
+            </span>
+        </a>
+        <hr>
+
+        <!--        Members-->
+        <div class="container mt-3 pl-4">
+            <span class="sidebar-text row" style="font-size: 10px; height: 10px; width: 200px;">MEMBERS</span>
+        </div>
+        <!--        Users-->
+        <a href="#users" class="content" style="width: 200px;"  value="1">
+            <i class="fa fa-user"></i>
+            <span class="sidebar-text" style="width: 150px;">
+                    Users
+            </span>
+        </a>
+        <!--        Providers-->
+        <a href="#providers" class="content" style="width: 200px;" value="1">
+            <i class="fa fa-car"></i>
+            <span class="sidebar-text" style="width: 150px;">
+                    Providers
+                </span>
+        </a>
+        <!--Admins-->
+        <a href="#sub-admin" class="content" style="width: 200px;" value="1">
+            <i class="far fa-star"></i>
+            <span class="sidebar-text" style="width: 150px;">
+                Sub admins
+            </span>
+        </a>
+        <!--        Dispatcher-->
+        <a href="#dispature" class="content" style="width: 200px;" value="1">
+            <i class="fa fa-map-pin"></i>
+            <span class="sidebar-text" style="width: 150px;">
+                Dispatcher
+            </span>
+        </a>
+        <!--        Fleet owner-->
+        <a href="#fleet" class="content" style="width: 200px;" value="1">
+            <i class="fa fa-star-of-life"></i>
+            <span class="sidebar-text" style="width: 150px;">
+                Fleet owner
+            </span>
+        </a>
+        <!--        account manager-->
+        <a href="#account" class="content" style="width: 300px;" value="1">
+            <i class="fa fa-cog"></i>
+            <span class="sidebar-text" style="width: 300px;">
+                Account manager
+            </span>
+        </a>
+        <hr>
+
+        <!--        accounts-->
+        <div class="container mt-3 pl-4">
+            <span class="sidebar-text row" style="font-size: 10px; height: 10px; width: 200px;">ACCOUNTS</span>
+        </div>
+
+        <!--        Statements-->
+        <a href="#" class="content" style="width: 300px;" data-toggle="#statement-submenu" value="1">
+            <i class="fa fa-file"></i>
+            <span class="sidebar-text" style="width: 300px;">
+                Statements
+            </span>
+        </a>
+        <div class="drop-items content rounded" id="statement-submenu">
+            <a href="#" class="" style="width: 300px;">
+                <i class="fa fa-file-alt"></i>
+                <span class="sidebar-text" style="width: 300px;">
+                    Overall ride statement
+                </span>
+            </a>
+            <a href="#" class="" style="width: 300px;">
+                <i class="fa fa-file-archive"></i>
+                <span class="sidebar-text" style="width: 250px;">
+                       Provider statement
+                </span>
+            </a>
+            <a href="#" class="" style="width: 300px;">
+                <i class="fa fa-file-import"></i>
+                <span class="sidebar-text" style="width: 250px;">
+                       Daily statement
+                </span>
+            </a>
+            <a href="#" class="" style="width: 300px;">
+                <i class="fa fa-file-invoice"></i>
+                <span class="sidebar-text" style="width: 250px;">
+                       Monthly statement
+                </span>
+            </a>
+            <a href="#" class="" style="width: 300px;">
+                <i class="fa fa-file-code"></i>
+                <span class="sidebar-text" style="width: 250px;">
+                       Yearly statement
+                </span>
+            </a>
+        </div>
+        <!--Roles & permission-->
+        <a href="#" class="content" style="width: 300px;" value="1">
+            <i class="fa fa-bars"></i>
+            <span class="sidebar-text" style="width: 300px;">
+                Roles & permission
+            </span>
+        </a>
+
+        <hr>
+        <!--Detail-->
+        <div class="container mt-3 pl-4">
+            <span class="sidebar-text row" style="font-size: 10px; height: 10px; width: 200px;">DETAILS</span>
+        </div>
+        <!-- Map -->
+        <a href="#" class="content" style="width: 300px;" value="1">
+            <i class="fa fa-map-marked-alt"></i>
+            <span class="sidebar-text" style="width: 300px;">
+                Map
+            </span>
+        </a>
+        <!-- Geo fencing -->
+        <a href="#" class="content" style="width: 300px;" value="1">
+            <i class="fa fa-map-marked-alt"></i>
+            <span class="sidebar-text" style="width: 300px;">
+                Geo fencing
+            </span>
+        </a>
+        <!--        Ratings-->
+        <a href="#" class="content" style="width: 300px;" data-toggle="#rating-submenu" value="1">
+            <i class="fa fa-cog"></i>
+            <span class="sidebar-text" style="width: 300px;">
+                Ratings & reviews
+            </span>
+        </a>
+        <div class="drop-items content rounded" id="rating-submenu">
+            <a href="#" class="" style="width: 300px;">
+                <i class="fa fa-cogs"></i>
+                <span class="sidebar-text" style="width: 300px;">
+                        User ratings
+                </span>
+            </a>
+            <a href="#" class="" style="width: 300px;">
+                <i class="fa fa-user-cog"></i>
+                <span class="sidebar-text" style="width: 250px;">
+                        Provider ratings
+                </span>
+            </a>
+        </div>
+
+        <hr>
+
+        <!--Request-->
+        <div class="container mt-3 pl-4">
+            <span class="sidebar-text row" style="font-size: 10px; height: 10px; width: 200px;">REQUESTS</span>
+        </div>
+        <!-- request history -->
+        <a href="#" class="content" style="width: 300px;" value="1">
+            <i class="fa fa-infinity"></i>
+            <span class="sidebar-text" style="width: 300px;">
+                Request history
+            </span>
+        </a>
+        <!-- payment settings -->
+        <a href="#" class="content" style="width: 300px;" value="1">
+            <i class="fa fa-palette"></i>
+            <span class="sidebar-text" style="width: 300px;">
+                Scheduled rides
+            </span>
+        </a>
+
+        <hr>
+
+        <!--General-->
+        <div class="container mt-3 pl-4">
+            <span class="sidebar-text row" style="font-size: 10px; height: 10px; width: 200px;">GENERAL</span>
+        </div>
+        <!--service type-->
+        <a href="#" class="content" style="width: 300px;" data-toggle="#service-type-submenu" value="1">
+            <i class="fa fa-th"></i>
+            <span class="sidebar-text" style="width: 300px;">
+                Service type
+            </span>
+        </a>
+        <div class="drop-items content rounded" id="service-type-submenu">
+            <a href="#" class="" style="width: 300px;">
+                <i class="fa fa-th-list"></i>
+                <span class="sidebar-text" style="width: 300px;">
+                        Service types
+                </span>
+            </a>
+            <a href="#" class="" style="width: 300px;">
+                <i class="fa fa-clock"></i>
+                <span class="sidebar-text" style="width: 250px;">
+                        Time
+                </span>
+            </a>
+        </div>
+        <!--        Documents-->
+        <a href="#" class="content" style="width: 300px;" data-toggle="#document-submenu" value="1">
+            <i class="fa fa-folder"></i>
+            <span class="sidebar-text" style="width: 300px;">
+                Documents
+            </span>
+        </a>
+        <!--promocode-->
+        <a href="#" class="content" style="width: 300px;" data-toggle="#promocode-submenu" value="1">
+            <i class="fa fa-folder"></i>
+            <span class="sidebar-text" style="width: 300px;">
+                Promocodes
+            </span>
+        </a>
+        <hr>
+
+        <!--payment detail-->
+        <div class="container mt-3 pl-4">
+            <span class="sidebar-text row" style="font-size: 10px; height: 10px; width: 200px;">SETTINGS</span>
+        </div>
+        <!--Payment history-->
+        <a href="#" class="content" style="width: 300px;" value="1">
+            <i class="fa fa-infinity"></i>
+            <span class="sidebar-text" style="width: 300px;">
+                Payment history
+            </span>
+        </a>
+        <!--Payment settings-->
+        <a href="#" class="content" style="width: 300px;" value="1">
+            <i class="fa fa-dollar-sign"></i>
+            <span class="sidebar-text" style="width: 300px;">
+                Payment settings
+            </span>
+        </a>
+        <hr>
+
+        <!--Settings-->
+        <div class="container mt-3 pl-4">
+            <span class="sidebar-text row" style="font-size: 10px; height: 10px; width: 200px;">SETTINGS</span>
+        </div>
+        <!--site settings-->
+        <a href="#" class="content" style="width: 300px;" value="1">
+            <i class="fa fa-cog"></i>
+            <span class="sidebar-text" style="width: 300px;">
+                Site settings
+            </span>
+        </a>
+
+        <hr>
+
+        <!--others-->
+        <div class="container mt-3 pl-4">
+            <span class="sidebar-text row" style="font-size: 10px; height: 10px; width: 200px;">OTHERS</span>
+        </div>
+        <!-- privacy policy -->
+        <a href="#" class="content" style="width: 300px;" value="1">
+            <i class="fa fa-i-cursor"></i>
+            <span class="sidebar-text" style="width: 300px;">
+                Privacy policy
+            </span>
+        </a>
+<!--        terms-->
+        <a href="#" class="content" style="width: 300px;" value="1">
+            <i class="fa fa-plus"></i>
+            <span class="sidebar-text" style="width: 300px;">
+                Terms
+            </span>
+        </a>
+<!--        about us-->
+        <a href="#" class="content" style="width: 300px;" value="1">
+            <i class="fa fa-heart"></i>
+            <span class="sidebar-text" style="width: 300px;">
+                About us
+            </span>
+        </a>
+<!--        faq-->
+        <a href="#" class="content" style="width: 300px;" value="1">
+            <i class="fa fa-chart-bar"></i>
+            <span class="sidebar-text" style="width: 300px;">
+                FAQ
+            </span>
+        </a>
+<!--        offers-->
+        <a href="#" class="content" style="width: 300px;" value="1">
+            <i class="fa fa-handshake"></i>
+            <span class="sidebar-text" style="width: 300px;">
+                Offers
+            </span>
+        </a>
+<!--        customer push-->
+        <a href="#" class="content" style="width: 300px;" value="1">
+            <i class="fa fa-text-height"></i>
+            <span class="sidebar-text" style="width: 300px;">
+                Customer push
+            </span>
+        </a>
+<!--        translation-->
+        <a href="#" class="content" style="width: 300px;" value="1">
+            <i class="fa fa-text-width"></i>
+            <span class="sidebar-text" style="width: 300px;">
+                Translations
+            </span>
+        </a>
+        <hr>
+
+        <!--account-->
+        <div class="container mt-3 pl-4">
+            <span class="sidebar-text row" style="font-size: 10px; height: 10px; width: 200px;">ACCOUNT</span>
+        </div>
+        <!-- account settings -->
+        <a href="#" class="content" style="width: 300px;" value="1">
+            <i class="fa fa-user"></i>
+            <span class="sidebar-text" style="width: 300px;">
+                Account Settings
+            </span>
+        </a>
+        <!--       change password-->
+        <a href="#" class="content" style="width: 300px;" value="1">
+            <i class="fa fa-arrows-alt-v"></i>
+            <span class="sidebar-text" style="width: 300px;">
+                Change password
+            </span>
+        </a><!--        terms-->
+        <a href="#" class="content" style="width: 300px;" value="1">
+            <i class="fa fa-power-off"></i>
+            <span class="sidebar-text" style="width: 300px;">
+                Logout
+            </span>
+        </a>
+
+    </div>
+
+
+    <!--    Content-->
+    <div class="container-fluid px-5">
+        <div class="content text-center text-primary font-weight-bold h4 py-2">
+            Admin panel
+        </div>
+        <main class="page-content">
+            dfdsytfidshfkbgi
+        </main>
+    </div>
+
+</div>
+
+
+</body>
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+<script src="../js/all.js"></script>
+
+
+<script>
+    sidebar = 0;
+
+    function togglesidebar() {
+        if (sidebar == 0) {
+            $(".sidebar-text").hide("fast");
+            $(".sidenav").animate({width: '70px'}, "slow");
+            sidebar = 1;
+        } else if (sidebar == 1) {
+            $(".sidenav").animate({width: '300px'}, "slow");
+            $(".sidebar-text").delay(200).show("slow");
+            sidebar = 0;
+        }
+
+    }
+
+    $(".d-btn").click(function () {
+        $(".drop-items").animate({height: "toggle"}, "slow");
+    });
+    // $('[data-toggle="tooltip"]').tooltip();
+
+    $(".content").on("click", function () {
+        $($(this).attr("data-toggle")).animate({height: "toggle"}, "slow");
+    });
+
+</script>
+
+</html>

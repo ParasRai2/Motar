@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Motar</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../../../css/all.css" rel="stylesheet">
+    <link href="../../css/sidebar.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="content bg-primary m-3 rounded px-3 py-3">
+    <div class="content text-center text-primary h4 font-weight-bold">
+        Geo fencing
+    </div>
+    <hr>
+
+    <style>
+        .table-row:hover {
+            background-color: #151932 !important;
+            cursor: pointer;
+        }
+
+        .box {
+            box-shadow: 0px 0px 15px #151932;
+            z-index: 3;
+        }
+
+        .box:hover {
+            box-shadow: 0px 0px 15px black;
+            cursor: pointer;
+            z-index: 3;
+        }
+    </style>
+
+    <div class="content rounded p-4 mt-3 text-primary "
+         style="box-shadow: 0px 0px 15px #1C233F; z-index:3;">
+        <div class="content font-weight-bold">
+            Geo fencing
+        </div>
+        <!--    Options-->
+        <div class="row mb-2">
+            <div class="col">
+                <div class="btn-group" role="group">
+                    <button class="btn btn-info btn-sm" type="button">copy</button>
+                    <button class="btn btn-info btn-sm" type="button">Excel</button>
+                    <button class="btn btn-info btn-sm" type="button">CSV</button>
+                    <button class="btn btn-info btn-sm" type="button">PDf</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="btn-group" role="group">
+                    <button class="btn btn-info btn-sm" type="button" data-toggle="modal" data-target="#addRole">Add
+                    </button>
+                    <button class="btn btn-danger btn-sm" type="button">Delete</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="col-10">
+                        <input class="form-control form-control-sm" placeholder="Search here.." type="search">
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-success btn-sm" type="button">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--    Table-->
+        <table class="table table-sm text-primary table-bordered" style="font-size: 14px;">
+            <thead class="bg-secondary">
+            <th class="text-center"><input type="checkbox"></th>
+            <th>ID</th>
+            <th>City name</th>
+            <th class="text-center">Action</th>
+            </thead>
+            <tbody class="text-primary">
+            <tr class="table-row">
+                <td class="text-center"><input type="checkbox"></td>
+                <td>000021</td>
+                <td>Ktm</td>
+                <td class="text-center">
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <!-- Add role -->
+    <div class="modal fade" id="addRole" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content bg-secondary">
+                <div class="modal-header">
+                    <h5 class="modal-title text-primary" id="addRoleTitle">Add Geo fencing</h5>
+                    <button type="button" class="close text-primary" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <form>
+                    <div class="modal-body">
+                        <div class="col">
+                            <div class="form-group">
+                                <label>City name</label>
+                                <input type="text" class="form-control form-control-sm" placeholder="Enter city name">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Range</label>
+
+                                <div class="rounded" id="googleMap" style="width:100%;height: 400px;" id="map"></div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-warning btn-sm" onclick="flightPath.setMap(null);">Clear map</button>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="subit" class="btn btn-success btn-sm" data-dismiss="modal">Save</button>
+                        <button type="reset" class="btn btn-danger btn-sm" data-dismiss="modal">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+
+<script
+        crossorigin="anonymous"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+<script src="../js/all.js"></script>
+
+<script>
+    function myMap() {
+        var mapProp= {
+            center:new google.maps.LatLng(28.3949, 84.1240),
+            zoom:8,
+        };
+        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    }
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 3,
+            center: {lat: 0, lng: -180},
+            mapTypeId: 'terrain'
+        });
+
+        var flightPlanCoordinates = [
+            {lat: 37.772, lng: -122.214},
+            {lat: 21.291, lng: -157.821},
+            {lat: -18.142, lng: 178.431},
+            {lat: -27.467, lng: 153.027}
+        ];
+        var flightPath = new google.maps.Polyline({
+            path: flightPlanCoordinates,
+            geodesic: true,
+            strokeColor: '#FF0000',
+            strokeOpacity: 1.0,
+            strokeWeight: 2
+        });
+
+        flightPath.setMap(map);
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYCRd5CIF8Oa0V4mi7nNpJMMz0gfS6TOc&callback=myMap"></script>
+
+
+</html>
